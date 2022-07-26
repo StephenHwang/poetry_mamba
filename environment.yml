@@ -1,0 +1,18 @@
+name: snakemake
+
+channels:
+  - nodefaults   #  no default channels, explicitly list all channels here
+  - conda-forge
+  - bioconda
+
+dependencies:        # if don't specify version, use the latest stable
+  - python=3.9.*
+  - poetry=1.*
+  - snakemake=7.9.0
+  - mamba
+  - pip              # explicit mention for conda-lock
+  - conda-lock
+  # add any additional dependencies to be installed by conda rather than poetry
+
+platforms: # Non-standard section listing target platforms for conda-lock:
+  - linux-64
